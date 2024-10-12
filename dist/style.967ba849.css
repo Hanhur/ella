@@ -1,2 +1,86 @@
+html 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before 
+{
+    box-sizing: inherit;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+button 
+{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+ul 
+{
+    list-style: none;
+}
+
+body 
+{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Similar-2-color);
+    /* font-family: "Corben", serif; */
+    /* font-family: "Baskervville", serif; */
+}
+
+@font-face 
+{
+    font-family: 'Lato';
+    src: url('/Lato-Regular.145c555b.ttf') format('ttf');
+    src: url('/Lato-Medium.67467308.ttf') format('ttf');
+    src: url('/Lato-SemiBold.a1ede198.ttf') format('ttf');
+    src: url('/Lato-Bold.cabedd35.ttf') format('ttf');
+}
+
+@font-face
+{
+    font-family: 'Corben';
+    src: url('/Corben-Regular.9b555afc.ttf') format('ttf');
+}
+
+@font-face
+{
+    font-family: 'Baskervville';
+    src: url('/Baskervville-Regular.2c2d2051.ttf') format('ttf');
+}
+
+:root 
+{
+    --White-color: #FFFFFF;
+    --White-1-color: #D9D9D9;
+    --White-2-color: #F6F3EE;
+    --Black-color: #000000;
+    --Red-color: #9C1137;
+    --Similar-1-color: #3d3d3d;
+    --Similar-2-color: #383434;
+    --Similar-3-color: #958F86;
+    --cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container
+{
+    max-width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
 /*# sourceMappingURL=/style.967ba849.css.map */
