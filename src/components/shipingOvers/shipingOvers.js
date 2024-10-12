@@ -23,7 +23,7 @@ export function shipingOvers()
     shipingOversButton.textContent = "INR";
 
     const shipingOversImages = document.createElement("img");
-    shipingOversImages.classList.add("shiping-ovres-img");
+    shipingOversImages.className = "shiping-ovres-img";
     shipingOversImages.src = chevronDown;
     shipingOversImages.alt = "Example image";
 

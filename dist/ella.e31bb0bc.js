@@ -200,7 +200,7 @@ function shipingOvers() {
   shipingOversButton.className = "shiping-overs-btn";
   shipingOversButton.textContent = "INR";
   var shipingOversImages = document.createElement("img");
-  shipingOversImages.classList.add("shiping-ovres-img");
+  shipingOversImages.className = "shiping-ovres-img";
   shipingOversImages.src = _chevronDown.default;
   shipingOversImages.alt = "Example image";
   shipingOvers.append(shipingOversText, shipingOversSale, shipingOversButton);
@@ -208,7 +208,60 @@ function shipingOvers() {
   shipingOversButton.append(shipingOversImages);
   return shipingOvers;
 }
-},{"../../img/chevron-down.svg":"src/img/chevron-down.svg","./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/components/header/header.css":[function(require,module,exports) {
+},{"../../img/chevron-down.svg":"src/img/chevron-down.svg","./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/img/logo.svg":[function(require,module,exports) {
+module.exports = "/logo.cabda74f.svg";
+},{}],"src/img/user.svg":[function(require,module,exports) {
+module.exports = "/user.c3b14727.svg";
+},{}],"src/img/heart.svg":[function(require,module,exports) {
+module.exports = "/heart.195e365b.svg";
+},{}],"src/img/shopping-bag.svg":[function(require,module,exports) {
+module.exports = "/shopping-bag.e4235124.svg";
+},{}],"src/components/search/search.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../img/microfon.svg":[["microfon.52931de0.svg","src/img/microfon.svg"],"src/img/microfon.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/search/search.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getSearch = getSearch;
+var _logo = _interopRequireDefault(require("../../img/logo.svg"));
+var _user = _interopRequireDefault(require("../../img/user.svg"));
+var _heart = _interopRequireDefault(require("../../img/heart.svg"));
+var _shoppingBag = _interopRequireDefault(require("../../img/shopping-bag.svg"));
+require("./search.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getSearch() {
+  var searchBox = document.createElement("div");
+  searchBox.className = "search-box";
+  var searchLogo = document.createElement("img");
+  searchLogo.className = "search-logo-img";
+  searchLogo.src = _logo.default;
+  searchLogo.alt = "Example image";
+  var searchForm = document.createElement("form");
+  searchForm.className = "search-form";
+  var searchInput = document.createElement("input");
+  searchInput.classList.add("search-input", "microfon", "search");
+  searchInput.placeholder = "What are you looking for Today? e.g dimond ring";
+  var searchUser = document.createElement("img");
+  searchUser.className = "search-user";
+  searchUser.src = _user.default;
+  searchUser.alt = "Example image";
+  var searchHeart = document.createElement("img");
+  searchHeart.className = "heart-user";
+  searchHeart.src = _heart.default;
+  searchHeart.alt = "Example image";
+  var searchShoppingBag = document.createElement("img");
+  searchShoppingBag.className = "shopping-bag";
+  searchShoppingBag.src = _shoppingBag.default;
+  searchShoppingBag.alt = "Example image";
+  searchBox.append(searchLogo, searchForm, searchUser, searchHeart, searchShoppingBag);
+  searchForm.append(searchInput);
+  return searchBox;
+}
+},{"../../img/logo.svg":"src/img/logo.svg","../../img/user.svg":"src/img/user.svg","../../img/heart.svg":"src/img/heart.svg","../../img/shopping-bag.svg":"src/img/shopping-bag.svg","./search.css":"src/components/search/search.css"}],"src/components/header/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -220,6 +273,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getHeader = getHeader;
 var _shipingOvers = require("../shipingOvers/shipingOvers");
+var _search = require("../search/search");
 require("./header.css");
 function getHeader() {
   var header = document.createElement("header");
@@ -227,10 +281,10 @@ function getHeader() {
   var container = document.createElement("div");
   container.className = "container";
   header.append(container);
-  container.append((0, _shipingOvers.shipingOvers)());
+  container.append((0, _shipingOvers.shipingOvers)(), (0, _search.getSearch)());
   return header;
 }
-},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
+},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","../search/search":"src/components/search/search.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -262,7 +316,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32853" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

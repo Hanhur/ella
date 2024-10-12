@@ -1,30 +1,3 @@
-.shiping-overs
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--Red-color);
-    padding: 22px 16px;
-}
-.shiping-overs-text,
-.shiping-overs-sale
-{
-    color: var(--White-color);
-}
-.shiping-overs-span
-{
-    margin-left: 5px;
-}
-.shiping-overs-btn
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--White-color);
-    border-radius: 13px;
-    padding: 7px 13px;
-    width: 84px;
-}
 .search-box
 {
     display: flex;
@@ -47,7 +20,7 @@
 }
 .microfon
 {
-    background-image: url(/microfon.52931de0.svg);
+    background-image: url(../../img/microfon.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -75,5 +48,3 @@
 {
     width: 30px;
 }
-
-/*# sourceMappingURL=/ella.e31bb0bc.css.map */
