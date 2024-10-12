@@ -117,7 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"src/img/chevron-down.svg":[function(require,module,exports) {
+module.exports = "/chevron-down.e0da3f97.svg";
+},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -179,13 +181,34 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.shipingOvers = shipingOvers;
+var _chevronDown = _interopRequireDefault(require("../../img/chevron-down.svg"));
 require("./shipingOvers.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function shipingOvers() {
   var shipingOvers = document.createElement("div");
   shipingOvers.className = "shiping-overs";
+  var shipingOversText = document.createElement("p");
+  shipingOversText.className = "shiping-overs-text";
+  shipingOversText.textContent = "FREE SHIPPING OVERS";
+  var shipingOversSpan = document.createElement("span");
+  shipingOversSpan.className = "shiping-overs-span";
+  shipingOversSpan.textContent = "$99";
+  var shipingOversSale = document.createElement("p");
+  shipingOversSale.className = "shiping-overs-sale";
+  shipingOversSale.textContent = "Mid-Season Sale Up to 70% OFF.";
+  var shipingOversButton = document.createElement("button");
+  shipingOversButton.className = "shiping-overs-btn";
+  shipingOversButton.textContent = "INR";
+  var shipingOversImages = document.createElement("img");
+  shipingOversImages.classList.add("shiping-ovres-img");
+  shipingOversImages.src = _chevronDown.default;
+  shipingOversImages.alt = "Example image";
+  shipingOvers.append(shipingOversText, shipingOversSale, shipingOversButton);
+  shipingOversText.append(shipingOversSpan);
+  shipingOversButton.append(shipingOversImages);
   return shipingOvers;
 }
-},{"./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/components/header/header.css":[function(require,module,exports) {
+},{"../../img/chevron-down.svg":"src/img/chevron-down.svg","./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/components/header/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -239,7 +262,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33205" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37003" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
