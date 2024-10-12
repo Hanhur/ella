@@ -117,9 +117,127 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
+})({"src/img/chevron-down.svg":[function(require,module,exports) {
+module.exports = "/chevron-down.e0da3f97.svg";
+},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/components/shipingOvers/shipingOvers.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/shipingOvers/shipingOvers.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.shipingOvers = shipingOvers;
+var _chevronDown = _interopRequireDefault(require("../../img/chevron-down.svg"));
+require("./shipingOvers.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function shipingOvers() {
+  var shipingOvers = document.createElement("div");
+  shipingOvers.className = "shiping-overs";
+  var shipingOversText = document.createElement("p");
+  shipingOversText.className = "shiping-overs-text";
+  shipingOversText.textContent = "FREE SHIPPING OVERS";
+  var shipingOversSpan = document.createElement("span");
+  shipingOversSpan.className = "shiping-overs-span";
+  shipingOversSpan.textContent = "$99";
+  var shipingOversSale = document.createElement("p");
+  shipingOversSale.className = "shiping-overs-sale";
+  shipingOversSale.textContent = "Mid-Season Sale Up to 70% OFF.";
+  var shipingOversButton = document.createElement("button");
+  shipingOversButton.className = "shiping-overs-btn";
+  shipingOversButton.textContent = "INR";
+  var shipingOversImages = document.createElement("img");
+  shipingOversImages.classList.add("shiping-ovres-img");
+  shipingOversImages.src = _chevronDown.default;
+  shipingOversImages.alt = "Example image";
+  shipingOvers.append(shipingOversText, shipingOversSale, shipingOversButton);
+  shipingOversText.append(shipingOversSpan);
+  shipingOversButton.append(shipingOversImages);
+  return shipingOvers;
+}
+},{"../../img/chevron-down.svg":"src/img/chevron-down.svg","./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/components/header/header.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/header/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHeader = getHeader;
+var _shipingOvers = require("../shipingOvers/shipingOvers");
+require("./header.css");
+function getHeader() {
+  var header = document.createElement("header");
+  header.className = "header";
+  var container = document.createElement("div");
+  container.className = "container";
+  header.append(container);
+  container.append((0, _shipingOvers.shipingOvers)());
+  return header;
+}
+},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _header = require("./src/components/header/header.js");
+var app = document.querySelector("#app");
+var header = (0, _header.getHeader)();
+app.append(header);
+},{"./src/components/header/header.js":"src/components/header/header.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -144,7 +262,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42677" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37003" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

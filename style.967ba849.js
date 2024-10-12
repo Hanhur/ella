@@ -168,7 +168,11 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/css/style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../fonts/Lato-Regular.ttf":[["Lato-Regular.145c555b.ttf","src/fonts/Lato-Regular.ttf"],"src/fonts/Lato-Regular.ttf"],"./../fonts/Lato-Medium.ttf":[["Lato-Medium.67467308.ttf","src/fonts/Lato-Medium.ttf"],"src/fonts/Lato-Medium.ttf"],"./../fonts/Lato-SemiBold.ttf":[["Lato-SemiBold.a1ede198.ttf","src/fonts/Lato-SemiBold.ttf"],"src/fonts/Lato-SemiBold.ttf"],"./../fonts/Lato-Bold.ttf":[["Lato-Bold.cabedd35.ttf","src/fonts/Lato-Bold.ttf"],"src/fonts/Lato-Bold.ttf"],"./../fonts/Corben-Regular.ttf":[["Corben-Regular.9b555afc.ttf","src/fonts/Corben-Regular.ttf"],"src/fonts/Corben-Regular.ttf"],"./../fonts/Baskervville-Regular.ttf":[["Baskervville-Regular.2c2d2051.ttf","src/fonts/Baskervville-Regular.ttf"],"src/fonts/Baskervville-Regular.ttf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -193,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42677" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37003" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
