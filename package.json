@@ -6,7 +6,7 @@
     "homepage": "https://hanhur.github.io/ella/",
     "scripts": {
         "start": "parcel ./*.html",
-        "predeploy": "parcel build ./*.html --public-url/ella/",
+        "predeploy": "parcel build ./*.html --public-url /ella/",
         "deploy": "gh-pages -d dist"
     },
     "author": "Vladimir Hanhur",
