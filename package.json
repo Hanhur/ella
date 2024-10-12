@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "homepage": "https://hanhur.github.io/OrganicFashion/",
+    "homepage": "https://hanhur.github.io/ella/",
     "scripts": {
         "start": "parcel ./*.html",
-        "predeploy": "parcel build ./*.html --public-url /OrganicFashion/",
+        "predeploy": "parcel build ./*.html --public-url/ella/",
         "deploy": "gh-pages -d dist"
     },
     "author": "Vladimir Hanhur",
