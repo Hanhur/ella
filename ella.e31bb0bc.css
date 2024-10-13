@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--Red-color);
-    padding: 22px 90px 16px;
+    padding: 22px 95px 16px;
+    flex-wrap: wrap;
 }
 .shiping-overs-text,
 .shiping-overs-sale
@@ -30,7 +31,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 22px 90px 30px;
+    padding: 22px 95px 30px;
+    flex-wrap: wrap;
 }
 .search-logo-img
 {
@@ -103,10 +105,56 @@
     justify-content: center;
     align-items: center;
     margin-right: 100px;
+    flex-wrap: wrap;
 }
 .items
 {
     text-transform: uppercase;
+}
+.section-milancelos
+{
+    padding-top: 287px;
+}
+.new-text
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--White-color);
+    margin-bottom: 20px;
+}
+.title
+{
+    font-family: "Baskervville", serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: var(--White-color);
+}
+.text
+{
+    font-size: 24px;
+    color: var(--White-color);
+    width: 480px;
+    margin-bottom: 70px;
+}
+.btn 
+{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--White-color);
+    background-color: var(--Red-color);
+    padding: 28px 96px;
+    margin-bottom: 4px;
+    position: relative;
+}
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 88px;
+    left: 55px;
+    width: 292px;
+    height: 2px;
+    background-color: var(--Red-color);
 }
 .section-milancelos
 {

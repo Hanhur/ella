@@ -339,7 +339,20 @@ function getSectionMain() {
   section.className = "section-milancelos";
   var container = document.createElement("div");
   container.className = "container";
+  var newText = document.createElement("p");
+  newText.className = "new-text";
+  newText.textContent = "NEW ARRIVALS";
+  var title = document.createElement("h1");
+  title.className = "title";
+  title.textContent = "Milancélos";
+  var text = document.createElement("p");
+  text.className = "text";
+  text.textContent = "Quisquemos sodale suscipit delio condiment cosmo lacus meleifend blanditos.";
+  var button = document.createElement("button");
+  button.className = "btn";
+  button.textContent = "SHOP NOW";
   section.append(container);
+  container.append(newText, title, text, button);
   return section;
 }
 },{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/page/pageMain.css":[function(require,module,exports) {
@@ -395,7 +408,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42551" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39763" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
