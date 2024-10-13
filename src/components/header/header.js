@@ -9,6 +9,7 @@ export function getHeader()
     const header = document.createElement("header");
     header.className = "header";
 
+   
     header.append(shipingOvers(), getSearch(), Navigations());
 
     return header;
