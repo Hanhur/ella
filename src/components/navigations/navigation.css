@@ -1,0 +1,16 @@
+.navigation
+{
+    margin-bottom: 25px;
+}
+.list
+{
+    display: flex;
+    gap: 0 33px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+.items
+{
+    text-transform: uppercase;
+}

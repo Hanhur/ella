@@ -267,7 +267,41 @@ function getSearch() {
   searchForm.append(searchInput);
   return searchBox;
 }
-},{"../../img/logo.svg":"src/img/logo.svg","../../img/microfon.svg":"src/img/microfon.svg","../../img/search.svg":"src/img/search.svg","../../img/user.svg":"src/img/user.svg","../../img/heart.svg":"src/img/heart.svg","../../img/shopping-bag.svg":"src/img/shopping-bag.svg","./search.css":"src/components/search/search.css"}],"src/components/header/header.css":[function(require,module,exports) {
+},{"../../img/logo.svg":"src/img/logo.svg","../../img/microfon.svg":"src/img/microfon.svg","../../img/search.svg":"src/img/search.svg","../../img/user.svg":"src/img/user.svg","../../img/heart.svg":"src/img/heart.svg","../../img/shopping-bag.svg":"src/img/shopping-bag.svg","./search.css":"src/components/search/search.css"}],"src/components/navigations/navigation.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/navigations/navigation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Navigations = Navigations;
+require("./navigation.css");
+var navigationsArray = ["Theme Demo", "Shop", "ProductHot", "Blog", "Pages", "New In", "Trend", "Collections", "Buy Ella"];
+function Navigations() {
+  var navigation = document.createElement("div");
+  navigation.className = "navigation";
+  var nav = document.createElement("nav");
+  nav.className = "navigator";
+  var list = document.createElement("ul");
+  list.className = "list";
+  navigationsArray.forEach(function (item) {
+    var items = document.createElement("li");
+    items.className = "items";
+    var link = document.createElement("a");
+    link.className = "link";
+    link.href = "/";
+    list.appendChild(items);
+    items.appendChild(link);
+    link.innerHTML = item;
+  });
+  navigation.append(nav);
+  nav.append(list);
+  return navigation;
+}
+},{"./navigation.css":"src/components/navigations/navigation.css"}],"src/components/header/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -280,6 +314,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.getHeader = getHeader;
 var _shipingOvers = require("../shipingOvers/shipingOvers");
 var _search = require("../search/search");
+var _navigation = require("../navigations/navigation");
 require("./header.css");
 function getHeader() {
   var header = document.createElement("header");
@@ -287,10 +322,10 @@ function getHeader() {
   var container = document.createElement("div");
   container.className = "container";
   header.append(container);
-  container.append((0, _shipingOvers.shipingOvers)(), (0, _search.getSearch)());
+  container.append((0, _shipingOvers.shipingOvers)(), (0, _search.getSearch)(), (0, _navigation.Navigations)());
   return header;
 }
-},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","../search/search":"src/components/search/search.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
+},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","../search/search":"src/components/search/search.js","../navigations/navigation":"src/components/navigations/navigation.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -322,7 +357,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43783" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44473" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

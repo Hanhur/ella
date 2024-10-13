@@ -94,5 +94,21 @@
     width: 30px;
     cursor: pointer;
 }
+.navigation
+{
+    margin-bottom: 25px;
+}
+.list
+{
+    display: flex;
+    gap: 0 33px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+.items
+{
+    text-transform: uppercase;
+}
 
 /*# sourceMappingURL=/ella.e31bb0bc.css.map */

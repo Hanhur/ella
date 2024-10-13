@@ -1,5 +1,6 @@
 import { shipingOvers } from "../shipingOvers/shipingOvers";
 import { getSearch } from "../search/search";
+import { Navigations } from "../navigations/navigation";
 
 import "./header.css";
 
@@ -12,7 +13,7 @@ export function getHeader()
     container.className = "container";
 
     header.append(container);
-    container.append(shipingOvers(), getSearch());
+    container.append(shipingOvers(), getSearch(), Navigations());
 
     return header;
 }
