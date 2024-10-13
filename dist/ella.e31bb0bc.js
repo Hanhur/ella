@@ -319,20 +319,58 @@ require("./header.css");
 function getHeader() {
   var header = document.createElement("header");
   header.className = "header";
-  var container = document.createElement("div");
-  container.className = "container";
-  header.append(container);
-  container.append((0, _shipingOvers.shipingOvers)(), (0, _search.getSearch)(), (0, _navigation.Navigations)());
+  header.append((0, _shipingOvers.shipingOvers)(), (0, _search.getSearch)(), (0, _navigation.Navigations)());
   return header;
 }
-},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","../search/search":"src/components/search/search.js","../navigations/navigation":"src/components/navigations/navigation.js","./header.css":"src/components/header/header.css"}],"index.js":[function(require,module,exports) {
+},{"../shipingOvers/shipingOvers":"src/components/shipingOvers/shipingOvers.js","../search/search":"src/components/search/search.js","../navigations/navigation":"src/components/navigations/navigation.js","./header.css":"src/components/header/header.css"}],"src/components/milancelos/milancelosMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/milancelos/milancelosMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getSectionMain = getSectionMain;
+require("./milancelosMain.css");
+function getSectionMain() {
+  var section = document.createElement("section");
+  section.className = "section-milancelos";
+  var container = document.createElement("div");
+  container.className = "container";
+  section.append(container);
+  return section;
+}
+},{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../img/main-bg.png":[["main-bg.13403173.png","src/img/main-bg.png"],"src/img/main-bg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getMain = getMain;
+var _milancelosMain = require("../components/milancelos/milancelosMain");
+require("./pageMain.css");
+function getMain() {
+  var main = document.createElement("main");
+  main.className = "main";
+  main.append((0, _milancelosMain.getSectionMain)());
+  return main;
+}
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
+var _pageMain = require("./src/page/pageMain.js");
 var app = document.querySelector("#app");
 var header = (0, _header.getHeader)();
-app.append(header);
-},{"./src/components/header/header.js":"src/components/header/header.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var main = (0, _pageMain.getMain)();
+app.append(header, main);
+},{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -357,7 +395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44473" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42551" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

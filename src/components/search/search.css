@@ -1,8 +1,9 @@
 .search-box
 {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 22px 0 30px;
+    padding: 22px 90px 30px;
 }
 .search-logo-img
 {
@@ -45,7 +46,7 @@
     border-radius: 9px;
     background-color: var(--White-2-color);
     padding: 18px 280px 18px 37px;
-    width: 700px;
+    width: 843px;
     margin-right: 72px;
 }
 .search-input::placeholder
@@ -55,15 +56,12 @@
     font-size: 16px;
     color: var(--Similar-3-color);
 }
-.search-user,
-.heart-user
-{
-    margin-right: 26px;
-}
+
 .search-user,
 .heart-user,
 .shopping-bag
 {
     width: 30px;
     cursor: pointer;
+
 }
