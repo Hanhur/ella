@@ -1,10 +1,10 @@
 .shiping-overs
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--Red-color);
-    padding: 22px 16px;
+    padding: 22px 90px 16px;
 }
 .shiping-overs-text,
 .shiping-overs-sale
@@ -28,8 +28,9 @@
 .search-box
 {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 22px 0 30px;
+    padding: 22px 90px 30px;
 }
 .search-logo-img
 {
@@ -72,7 +73,7 @@
     border-radius: 9px;
     background-color: var(--White-2-color);
     padding: 18px 280px 18px 37px;
-    width: 700px;
+    width: 843px;
     margin-right: 72px;
 }
 .search-input::placeholder
@@ -82,17 +83,14 @@
     font-size: 16px;
     color: var(--Similar-3-color);
 }
-.search-user,
-.heart-user
-{
-    margin-right: 26px;
-}
+
 .search-user,
 .heart-user,
 .shopping-bag
 {
     width: 30px;
     cursor: pointer;
+
 }
 .navigation
 {
@@ -109,6 +107,15 @@
 .items
 {
     text-transform: uppercase;
+}
+.section-milancelos
+{
+    background-image: url(/main-bg.13403173.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 970px;
 }
 
 /*# sourceMappingURL=/ella.e31bb0bc.css.map */
