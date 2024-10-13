@@ -210,6 +210,10 @@ function shipingOvers() {
 }
 },{"../../img/chevron-down.svg":"src/img/chevron-down.svg","./shipingOvers.css":"src/components/shipingOvers/shipingOvers.css"}],"src/img/logo.svg":[function(require,module,exports) {
 module.exports = "/logo.cabda74f.svg";
+},{}],"src/img/microfon.svg":[function(require,module,exports) {
+module.exports = "/microfon.52931de0.svg";
+},{}],"src/img/search.svg":[function(require,module,exports) {
+module.exports = "/search.dca1606c.svg";
 },{}],"src/img/user.svg":[function(require,module,exports) {
 module.exports = "/user.c3b14727.svg";
 },{}],"src/img/heart.svg":[function(require,module,exports) {
@@ -220,7 +224,7 @@ module.exports = "/shopping-bag.e4235124.svg";
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../img/microfon.svg":[["microfon.52931de0.svg","src/img/microfon.svg"],"src/img/microfon.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/search/search.js":[function(require,module,exports) {
+},{"./../../img/search.svg":[["search.dca1606c.svg","src/img/search.svg"],"src/img/search.svg"],"./../../img/microfon.svg":[["microfon.52931de0.svg","src/img/microfon.svg"],"src/img/microfon.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/search/search.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -228,6 +232,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getSearch = getSearch;
 var _logo = _interopRequireDefault(require("../../img/logo.svg"));
+var _microfon = _interopRequireDefault(require("../../img/microfon.svg"));
+var _search = _interopRequireDefault(require("../../img/search.svg"));
 var _user = _interopRequireDefault(require("../../img/user.svg"));
 var _heart = _interopRequireDefault(require("../../img/heart.svg"));
 var _shoppingBag = _interopRequireDefault(require("../../img/shopping-bag.svg"));
@@ -243,7 +249,7 @@ function getSearch() {
   var searchForm = document.createElement("form");
   searchForm.className = "search-form";
   var searchInput = document.createElement("input");
-  searchInput.classList.add("search-input", "microfon", "search");
+  searchInput.className = "search-input";
   searchInput.placeholder = "What are you looking for Today? e.g dimond ring";
   var searchUser = document.createElement("img");
   searchUser.className = "search-user";
@@ -261,7 +267,7 @@ function getSearch() {
   searchForm.append(searchInput);
   return searchBox;
 }
-},{"../../img/logo.svg":"src/img/logo.svg","../../img/user.svg":"src/img/user.svg","../../img/heart.svg":"src/img/heart.svg","../../img/shopping-bag.svg":"src/img/shopping-bag.svg","./search.css":"src/components/search/search.css"}],"src/components/header/header.css":[function(require,module,exports) {
+},{"../../img/logo.svg":"src/img/logo.svg","../../img/microfon.svg":"src/img/microfon.svg","../../img/search.svg":"src/img/search.svg","../../img/user.svg":"src/img/user.svg","../../img/heart.svg":"src/img/heart.svg","../../img/shopping-bag.svg":"src/img/shopping-bag.svg","./search.css":"src/components/search/search.css"}],"src/components/header/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -316,7 +322,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32853" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43783" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

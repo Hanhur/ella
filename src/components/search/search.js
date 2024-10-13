@@ -1,4 +1,6 @@
 import logo from "../../img/logo.svg";
+import microfonSvg from "../../img/microfon.svg";
+import searchSvg from "../../img/search.svg";
 import userSvg from "../../img/user.svg";
 import heartSvg from "../../img/heart.svg";
 import shoppingBagSvg from "../../img/shopping-bag.svg";
@@ -17,9 +19,9 @@ export function getSearch()
 
     const searchForm = document.createElement("form");
     searchForm.className = "search-form";
-
+    
     const searchInput = document.createElement("input");
-    searchInput.classList.add("search-input", "microfon", "search");
+    searchInput.className = "search-input";
     searchInput.placeholder = "What are you looking for Today? e.g dimond ring";
 
     const searchUser = document.createElement("img");
