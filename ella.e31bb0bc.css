@@ -25,5 +25,74 @@
     padding: 7px 13px;
     width: 84px;
 }
+.search-box
+{
+    display: flex;
+    align-items: center;
+    padding: 22px 0 30px;
+}
+.search-logo-img
+{
+    width: 124px;
+    margin-right: 72px;
+}
+.search-form
+{
+    position: relative;
+}
+.search-form::after
+{
+    content: '';
+    position: absolute;
+    background-image: url(/search.dca1606c.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 0;
+    right: 85px;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.search-form::before
+{
+    content: '';
+    position: absolute;
+    background-image: url(/microfon.52931de0.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 0;
+    right: 120px;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.search-input
+{
+    border: none;
+    border-radius: 9px;
+    background-color: var(--White-2-color);
+    padding: 18px 280px 18px 37px;
+    width: 700px;
+    margin-right: 72px;
+}
+.search-input::placeholder
+{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Similar-3-color);
+}
+.search-user,
+.heart-user
+{
+    margin-right: 26px;
+}
+.search-user,
+.heart-user,
+.shopping-bag
+{
+    width: 30px;
+    cursor: pointer;
+}
 
 /*# sourceMappingURL=/ella.e31bb0bc.css.map */
