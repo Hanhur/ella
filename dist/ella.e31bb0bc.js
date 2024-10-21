@@ -355,7 +355,62 @@ function getSectionMain() {
   container.append(newText, title, text, button);
   return section;
 }
-},{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/img/topProduct/chevron-left.svg":[function(require,module,exports) {
+module.exports = "/chevron-left.fb015092.svg";
+},{}],"src/img/topProduct/chevron-right.svg":[function(require,module,exports) {
+module.exports = "/chevron-right.3792c08a.svg";
+},{}],"src/components/topProduct/topProduct.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/topProduct/topProduct.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTopProduct = getTopProduct;
+var _chevronLeft = _interopRequireDefault(require("../../img/topProduct/chevron-left.svg"));
+var _chevronRight = _interopRequireDefault(require("../../img/topProduct/chevron-right.svg"));
+require("./topProduct.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var productArray = ["Diamond Ring", "Bracelet", "Pendant", "Earring"];
+function getTopProduct() {
+  var section = document.createElement("section");
+  section.className = "section-product";
+  var container = document.createElement("div");
+  container.className = "container";
+  var productBlock = document.createElement("div");
+  productBlock.className = "product-block";
+  var title = document.createElement("h2");
+  title.className = "product-title";
+  title.textContent = "Top Product";
+  var list = document.createElement("ul");
+  list.className = "list-product";
+  productArray.forEach(function (item) {
+    var items = document.createElement("li");
+    items.className = "items-product";
+    var link = document.createElement("a");
+    link.className = "link-product";
+    link.href = "/";
+    list.appendChild(items);
+    items.appendChild(link);
+    link.innerHTML = item;
+  });
+  var chevronLeftSvg = document.createElement("img");
+  chevronLeftSvg.className = "chevron-lift";
+  chevronLeftSvg.src = _chevronLeft.default;
+  chevronLeftSvg.alt = "Example image";
+  var chevronRightSvg = document.createElement("img");
+  chevronRightSvg.className = "chevron-right";
+  chevronRightSvg.src = _chevronRight.default;
+  chevronRightSvg.alt = "Example image";
+  section.append(container);
+  container.append(productBlock);
+  productBlock.append(title, list, chevronLeftSvg, chevronRightSvg);
+  return section;
+}
+},{"../../img/topProduct/chevron-left.svg":"src/img/topProduct/chevron-left.svg","../../img/topProduct/chevron-right.svg":"src/img/topProduct/chevron-right.svg","./topProduct.css":"src/components/topProduct/topProduct.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -367,14 +422,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getMain = getMain;
 var _milancelosMain = require("../components/milancelos/milancelosMain");
+var _topProduct = require("../components/topProduct/topProduct");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -408,7 +464,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39763" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36947" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -156,6 +156,39 @@
     height: 2px;
     background-color: var(--Red-color);
 }
+.product-block
+{
+    display: flex;
+    align-items: center;
+}
+.product-title
+{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--Red-color);
+    margin-right: 486px;
+}
+.list-product
+{
+    display: flex;
+    gap: 0 70px;
+    margin-right: 28px;
+}
+.link-product
+{
+    color: var(--Similar-3-color);
+}
+.chevron-lift
+{
+    margin-right: 10px;
+    width: 24px;
+    cursor: pointer;
+}
+.chevron-right
+{
+    width: 24px;
+    cursor: pointer;
+}
 .section-milancelos
 {
     background-image: url(/main-bg.13403173.png);
