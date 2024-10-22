@@ -1,3 +1,4 @@
+import { getTopProductShop } from "../topProductShop/topProductShop";
 import chevronLeft from "../../img/topProduct/chevron-left.svg";
 import chevronRight from "../../img/topProduct/chevron-right.svg";
 
@@ -50,7 +51,7 @@ export function getTopProduct()
 
 
     section.append(container);
-    container.append(productBlock);
+    container.append(productBlock, getTopProductShop());
     productBlock.append(title, list, chevronLeftSvg, chevronRightSvg);
 
     return section;
