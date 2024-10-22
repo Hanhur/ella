@@ -355,7 +355,38 @@ function getSectionMain() {
   container.append(newText, title, text, button);
   return section;
 }
-},{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/img/topProduct/chevron-left.svg":[function(require,module,exports) {
+},{"./milancelosMain.css":"src/components/milancelos/milancelosMain.css"}],"src/img/topProduct/diamond.png":[function(require,module,exports) {
+module.exports = "/diamond.32b31afe.png";
+},{}],"src/img/topProduct/makers.png":[function(require,module,exports) {
+module.exports = "/makers.87111406.png";
+},{}],"src/img/topProduct/nesting.png":[function(require,module,exports) {
+module.exports = "/nesting.d4c63f01.png";
+},{}],"src/img/topProduct/olive.png":[function(require,module,exports) {
+module.exports = "/olive.f7467bff.png";
+},{}],"src/components/topProductShop/topProductShop.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/topProductShop/topProductShop.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTopProductShop = getTopProductShop;
+var _diamond = _interopRequireDefault(require("../../img/topProduct/diamond.png"));
+var _makers = _interopRequireDefault(require("../../img/topProduct/makers.png"));
+var _nesting = _interopRequireDefault(require("../../img/topProduct/nesting.png"));
+var _olive = _interopRequireDefault(require("../../img/topProduct/olive.png"));
+require("./topProductShop.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getTopProductShop() {
+  var productShop = document.createElement("div");
+  productShop.className = "product-shop";
+  productShop.innerHTML = "\n        <div class=\"product-shop-block\">\n            <img class=\"product-shop-img\" src=\"".concat(_diamond.default, "\" alt=\"Diamond In Platinum\"/>\n            <h3 class=\"product-shop-title\">Diamond In Platinum</h3>\n            <p class=\"product-shop-text\">Shop Now</p>\n        </div>\n        <div class=\"product-shop-block\">\n            <img class=\"product-shop-img\" src=\"").concat(_makers.default, "\" alt=\"Makers Slice Ring\"/>\n            <h3 class=\"product-shop-title\">Makers Slice Ring</h3>\n            <p class=\"product-shop-text\">Shop Now</p>\n        </div>\n        <div class=\"product-shop-block\">\n            <img class=\"product-shop-img\" src=\"").concat(_nesting.default, "\" alt=\"Nesting Band Ring\"/>\n            <h3 class=\"product-shop-title\">Nesting Band Ring</h3>\n            <p class=\"product-shop-text\">Shop Now</p>\n        </div>\n        <div class=\"product-shop-block\">\n            <img class=\"product-shop-img\" src=\"").concat(_olive.default, "\" alt=\"Olive Leaf Band Ring\"/>\n            <h3 class=\"product-shop-title\">Olive Leaf Band Ring</h3>\n            <p class=\"product-shop-text\">Shop Now</p>\n        </div>\n    ");
+  return productShop;
+}
+},{"../../img/topProduct/diamond.png":"src/img/topProduct/diamond.png","../../img/topProduct/makers.png":"src/img/topProduct/makers.png","../../img/topProduct/nesting.png":"src/img/topProduct/nesting.png","../../img/topProduct/olive.png":"src/img/topProduct/olive.png","./topProductShop.css":"src/components/topProductShop/topProductShop.css"}],"src/img/topProduct/chevron-left.svg":[function(require,module,exports) {
 module.exports = "/chevron-left.fb015092.svg";
 },{}],"src/img/topProduct/chevron-right.svg":[function(require,module,exports) {
 module.exports = "/chevron-right.3792c08a.svg";
@@ -370,6 +401,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getTopProduct = getTopProduct;
+var _topProductShop = require("../topProductShop/topProductShop");
 var _chevronLeft = _interopRequireDefault(require("../../img/topProduct/chevron-left.svg"));
 var _chevronRight = _interopRequireDefault(require("../../img/topProduct/chevron-right.svg"));
 require("./topProduct.css");
@@ -406,11 +438,11 @@ function getTopProduct() {
   chevronRightSvg.src = _chevronRight.default;
   chevronRightSvg.alt = "Example image";
   section.append(container);
-  container.append(productBlock);
+  container.append(productBlock, (0, _topProductShop.getTopProductShop)());
   productBlock.append(title, list, chevronLeftSvg, chevronRightSvg);
   return section;
 }
-},{"../../img/topProduct/chevron-left.svg":"src/img/topProduct/chevron-left.svg","../../img/topProduct/chevron-right.svg":"src/img/topProduct/chevron-right.svg","./topProduct.css":"src/components/topProduct/topProduct.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../topProductShop/topProductShop":"src/components/topProductShop/topProductShop.js","../../img/topProduct/chevron-left.svg":"src/img/topProduct/chevron-left.svg","../../img/topProduct/chevron-right.svg":"src/img/topProduct/chevron-right.svg","./topProduct.css":"src/components/topProduct/topProduct.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -464,7 +496,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36947" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38963" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
