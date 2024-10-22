@@ -442,7 +442,50 @@ function getTopProduct() {
   productBlock.append(title, list, chevronLeftSvg, chevronRightSvg);
   return section;
 }
-},{"../topProductShop/topProductShop":"src/components/topProductShop/topProductShop.js","../../img/topProduct/chevron-left.svg":"src/img/topProduct/chevron-left.svg","../../img/topProduct/chevron-right.svg":"src/img/topProduct/chevron-right.svg","./topProduct.css":"src/components/topProduct/topProduct.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../topProductShop/topProductShop":"src/components/topProductShop/topProductShop.js","../../img/topProduct/chevron-left.svg":"src/img/topProduct/chevron-left.svg","../../img/topProduct/chevron-right.svg":"src/img/topProduct/chevron-right.svg","./topProduct.css":"src/components/topProduct/topProduct.css"}],"src/img/newArrivals/group-1.png":[function(require,module,exports) {
+module.exports = "/group-1.5f173f12.png";
+},{}],"src/img/newArrivals/group-2.png":[function(require,module,exports) {
+module.exports = "/group-2.eb444e9b.png";
+},{}],"src/img/newArrivals/group-3.png":[function(require,module,exports) {
+module.exports = "/group-3.5359a3b8.png";
+},{}],"src/img/newArrivals/shopping-bag.svg":[function(require,module,exports) {
+module.exports = "/shopping-bag.fb6e8e59.svg";
+},{}],"src/components/newArrivals/newArrivals.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/newArrivals/newArrivals.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getNewArrivals = getNewArrivals;
+var _group = _interopRequireDefault(require("../../img/newArrivals/group-1.png"));
+var _group2 = _interopRequireDefault(require("../../img/newArrivals/group-2.png"));
+var _group3 = _interopRequireDefault(require("../../img/newArrivals/group-3.png"));
+var _shoppingBag = _interopRequireDefault(require("../../img/newArrivals/shopping-bag.svg"));
+require("./newArrivals.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getNewArrivals() {
+  var section = document.createElement("section");
+  section.className = "section-arrivals";
+  var container = document.createElement("div");
+  container.className = "container";
+  var newArrivalsTitle = document.createElement("h2");
+  newArrivalsTitle.className = "arrivals-title";
+  newArrivalsTitle.textContent = "New Arrivals";
+  var newArrivalsBlock = document.createElement("div");
+  newArrivalsBlock.className = "arrivals-block";
+  newArrivalsBlock.innerHTML = "\n        <div class=\"arrivals-box\">\n            <img class=\"arrivals-img\" src=\"".concat(_group.default, "\" alt=\"\"/>\n            <div class=\"arrivals-brend\">\n                <div class=\"arrivals_brend\">\n                    <span class=\"arrivals-span\">$22.00</span>\n                    <span class=\"arrivals_span\">$82.00</span>\n                    <p class=\"arrivals-text\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"arrivals-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n        <div class=\"arrivals-box\">\n            <img class=\"arrivals-img\" src=\"").concat(_group2.default, "\" alt=\"\"/>\n            <div class=\"arrivals-brend\">\n                <div class=\"arrivals_brend\">\n                    <span class=\"arrivals-span\">$22.00</span>\n                    <span class=\"arrivals_span\">$82.00</span>\n                    <p class=\"arrivals-text\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"arrivals-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n        <div class=\"arrivals-box\">\n            <img class=\"arrivals-img\" src=\"").concat(_group3.default, "\" alt=\"\"/>\n            <div class=\"arrivals-brend\">\n                <div class=\"arrivals_brend\">\n                    <span class=\"arrivals-span\">$22.00</span>\n                    <span class=\"arrivals_span\">$82.00</span>\n                    <p class=\"arrivals-text\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"arrivals-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n    ");
+  var arrivalsButton = document.createElement("button");
+  arrivalsButton.className = "arrivals-btn";
+  arrivalsButton.textContent = "View All";
+  section.append(container);
+  container.append(newArrivalsTitle, newArrivalsBlock, arrivalsButton);
+  return section;
+}
+},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./newArrivals.css":"src/components/newArrivals/newArrivals.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -455,14 +498,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.getMain = getMain;
 var _milancelosMain = require("../components/milancelos/milancelosMain");
 var _topProduct = require("../components/topProduct/topProduct");
+var _newArrivals = require("../components/newArrivals/newArrivals");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -496,7 +540,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38963" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43675" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
