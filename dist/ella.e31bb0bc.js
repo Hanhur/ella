@@ -548,7 +548,47 @@ function getFeaturedProducts() {
   section.append(featuredProductsTitle, featuredProductsBlock, featuredProductsButton);
   return section;
 }
-},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./featuredProducts.css":"src/components/featuredProducts/featuredProducts.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./featuredProducts.css":"src/components/featuredProducts/featuredProducts.css"}],"src/img/mustHave/have.png":[function(require,module,exports) {
+module.exports = "/have.5d0b43ff.png";
+},{}],"src/img/mustHave/car.svg":[function(require,module,exports) {
+module.exports = "/car.9ca70bb1.svg";
+},{}],"src/img/mustHave/package.svg":[function(require,module,exports) {
+module.exports = "/package.754f8d3f.svg";
+},{}],"src/img/mustHave/secure.svg":[function(require,module,exports) {
+module.exports = "/secure.7948dd78.svg";
+},{}],"src/components/mustHave/mustHave.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/mustHave/mustHave.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getMustHave = getMustHave;
+var _have = _interopRequireDefault(require("../../img/mustHave/have.png"));
+var _car = _interopRequireDefault(require("../../img/mustHave/car.svg"));
+var _package = _interopRequireDefault(require("../../img/mustHave/package.svg"));
+var _secure = _interopRequireDefault(require("../../img/mustHave/secure.svg"));
+require("./mustHave.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getMustHave() {
+  var section = document.createElement("section");
+  section.className = "section-have";
+  var container = document.createElement("div");
+  container.className = "container";
+  var mustHaveTitle = document.createElement("h2");
+  mustHaveTitle.className = "have-title";
+  mustHaveTitle.textContent = "Must Have";
+  var mustHaveBlock = document.createElement("div");
+  mustHaveBlock.className = "have-block";
+  mustHaveBlock.innerHTML = "\n        <div class=\"have-box\">\n            <div class=\"have_box\">\n                <img class=\"have-img\" src=\"".concat(_have.default, "\"/>\n                <div class=\"have-save\">\n                    <p class=\"have-save_text\">18k Gold Bracelets</p>\n                    <span class=\"have-save_span\">SALE UP TO 30% OFF</span>\n                </div>\n            </div>\n            <div class=\"have_save\">\n                <p class=\"have-save-text\">SALE UP TO 30% OFF</p>\n                <h3 class=\"have-save-title\">18k Gold Bracelets</h3>\n                <button class=\"have-save-btn\">SHOP NOW</button>\n            </div>\n        </div>\n        <div class=\"have-shipping\">\n            <div class=\"have-shipping-box\">\n                <img class=\"have-shipping-img\" src=\"").concat(_car.default, "\"/>\n                <div class=\"have_shipping\">\n                    <h4 class=\"have-shipping-title\">FREE SHIPPING</h4>\n                    <p class=\"have-shipping-text\">Lorem ipsum dolor sit amet,.</p>\n                </div>\n            </div>\n            <div class=\"have-shipping-box\">\n                <img class=\"have-shipping-img\" src=\"").concat(_package.default, "\"/>\n                <div class=\"have_shipping\">\n                    <h4 class=\"have-shipping-title\">FREE IN STORE RETURN</h4>\n                    <p class=\"have-shipping-text\">Lorem ipsum dolor sit amet,.</p>\n                </div>\n            </div>\n            <div class=\"have-shipping-box\">\n                <img class=\"have-shipping-img\" src=\"").concat(_secure.default, "\"/>\n                <div class=\"have_shipping\">\n                    <h4 class=\"have-shipping-title\">100%SECURE CHECKOUT</h4>\n                    <p class=\"have-shipping-text\">Lorem ipsum dolor sit amet,.</p>\n                </div>\n            </div>\n        </div>\n    ");
+  section.append(container);
+  container.append(mustHaveTitle, mustHaveBlock);
+  return section;
+}
+},{"../../img/mustHave/have.png":"src/img/mustHave/have.png","../../img/mustHave/car.svg":"src/img/mustHave/car.svg","../../img/mustHave/package.svg":"src/img/mustHave/package.svg","../../img/mustHave/secure.svg":"src/img/mustHave/secure.svg","./mustHave.css":"src/components/mustHave/mustHave.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -564,14 +604,15 @@ var _topProduct = require("../components/topProduct/topProduct");
 var _newArrivals = require("../components/newArrivals/newArrivals");
 var _newCollection = require("../components/newCollection/newCollection");
 var _featuredProducts = require("../components/featuredProducts/featuredProducts");
+var _mustHave = require("../components/mustHave/mustHave");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)(), (0, _mustHave.getMustHave)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","../components/mustHave/mustHave":"src/components/mustHave/mustHave.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -605,7 +646,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37491" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39671" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
