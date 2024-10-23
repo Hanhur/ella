@@ -171,6 +171,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .product-shop-img
 {
@@ -248,7 +249,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--Similar-2-color);
+    border: 1px solid var(--Similar-3-color);
     background-color: var(--White-color);
     padding: 40px 25px;
     width: 407px;
@@ -360,6 +361,87 @@
     height: 1px;
     background-color: var(--Red-color);
     cursor: none;
+}
+.section-products
+{
+    background-color: var(--White-2-color);
+    padding-top: 35px;
+    padding-bottom: 37px;
+    margin-bottom: 75px;
+}
+.featured-title
+{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--Red-color);
+    margin-bottom: 55px;
+}
+.featured-block
+{
+    display: flex;
+    justify-content: center;
+    gap: 0 30px;
+    flex-wrap: wrap;
+}
+.featured-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Similar-3-color);
+    background-color: var(--White-color);
+    padding: 40px 25px;
+    width: 407px;
+    height: 450px;
+    margin-bottom: 45px;
+}
+.featured-img
+{
+    margin-top: 50px;
+    width: 250px;
+}
+.featured-brend
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured_brend
+{
+    margin-right: 103px;
+}
+.featured-span
+{
+    font-weight: 500;
+    color: var(--Red-color);
+}
+.featured_span
+{
+    color: var(--Similar-3-color);
+    text-decoration: line-through;
+}
+.featured-text
+{
+    font-size: 20px;
+    color: var(--Similar-2-color);
+    margin-top: 6px;
+}
+.featured-shopping
+{
+    cursor: pointer;
+}
+.featured-btn
+{
+    display: flex;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid var(--Red-color);
+    padding: 13px 63px;
+    text-transform: initial;
+    color: var(--Red-color);
 }
 .section-milancelos
 {
