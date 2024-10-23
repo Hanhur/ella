@@ -485,7 +485,38 @@ function getNewArrivals() {
   container.append(newArrivalsTitle, newArrivalsBlock, arrivalsButton);
   return section;
 }
-},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./newArrivals.css":"src/components/newArrivals/newArrivals.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./newArrivals.css":"src/components/newArrivals/newArrivals.css"}],"src/img/birthday.png":[function(require,module,exports) {
+module.exports = "/birthday.9a5b5a85.png";
+},{}],"src/img/summer.png":[function(require,module,exports) {
+module.exports = "/summer.cf13226d.png";
+},{}],"src/components/newCollection/newCollection.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/newCollection/newCollection.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getNewCollection = getNewCollection;
+var _birthday = _interopRequireDefault(require("../../img/birthday.png"));
+var _summer = _interopRequireDefault(require("../../img/summer.png"));
+require("./newCollection.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getNewCollection() {
+  var section = document.createElement("section");
+  section.className = "section-collection";
+  var container = document.createElement("div");
+  container.className = "container";
+  var newCollectionBlock = document.createElement("div");
+  newCollectionBlock.className = "collection-block";
+  newCollectionBlock.innerHTML = "\n        <div class=\"collectiob-box\">\n            <img class=\"birthday-img\" src=\"".concat(_birthday.default, "\" alt=\"Example image\"/>\n            <div class=\"collection-birthday\">\n                <p class=\"collection-text\">Must See New Style</p>\n                <h2 class=\"collection-title\">Birthday Collection</h2>\n                <button class=\"collection-btn\">Shop Now</button>\n            </div>\n        </div>\n        <div class=\"collectiob-box\">\n            <img class=\"birthday-img\" src=\"").concat(_summer.default, "\" alt=\"Example image\"/>\n            <div class=\"collection-birthday\">\n                <p class=\"collection-text\">New collection</p>\n                <h2 class=\"collection-title\">Summer Essentials</h2>\n                <button class=\"collection-btn\">Shop Now</button>\n            </div>\n        </div>\n    ");
+  section.append(container);
+  container.append(newCollectionBlock);
+  return section;
+}
+},{"../../img/birthday.png":"src/img/birthday.png","../../img/summer.png":"src/img/summer.png","./newCollection.css":"src/components/newCollection/newCollection.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -499,14 +530,15 @@ exports.getMain = getMain;
 var _milancelosMain = require("../components/milancelos/milancelosMain");
 var _topProduct = require("../components/topProduct/topProduct");
 var _newArrivals = require("../components/newArrivals/newArrivals");
+var _newCollection = require("../components/newCollection/newCollection");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -540,7 +572,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43675" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35699" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
