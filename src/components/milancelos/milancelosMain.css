@@ -42,4 +42,5 @@
     width: 292px;
     height: 2px;
     background-color: var(--Red-color);
+    cursor: none;
 }
