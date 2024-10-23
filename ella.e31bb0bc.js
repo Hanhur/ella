@@ -516,7 +516,39 @@ function getNewCollection() {
   container.append(newCollectionBlock);
   return section;
 }
-},{"../../img/birthday.png":"src/img/birthday.png","../../img/summer.png":"src/img/summer.png","./newCollection.css":"src/components/newCollection/newCollection.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../../img/birthday.png":"src/img/birthday.png","../../img/summer.png":"src/img/summer.png","./newCollection.css":"src/components/newCollection/newCollection.css"}],"src/components/featuredProducts/featuredProducts.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/featuredProducts/featuredProducts.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFeaturedProducts = getFeaturedProducts;
+var _group = _interopRequireDefault(require("../../img/newArrivals/group-1.png"));
+var _group2 = _interopRequireDefault(require("../../img/newArrivals/group-2.png"));
+var _group3 = _interopRequireDefault(require("../../img/newArrivals/group-3.png"));
+var _shoppingBag = _interopRequireDefault(require("../../img/newArrivals/shopping-bag.svg"));
+require("./featuredProducts.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getFeaturedProducts() {
+  var section = document.createElement("section");
+  section.className = "section-products";
+  var featuredProductsTitle = document.createElement("h2");
+  featuredProductsTitle.className = "featured-title";
+  featuredProductsTitle.textContent = "Featured Products";
+  var featuredProductsBlock = document.createElement("div");
+  featuredProductsBlock.className = "featured-block";
+  featuredProductsBlock.innerHTML = "\n        <div class=\"featured-box\">\n            <img class=\"featured-img\" src=\"".concat(_group.default, "\" alt=\"\"/>\n            <div class=\"featured-brend\">\n                <div class=\"featured_brend\">\n                    <span class=\"featured-span\">$22.00</span>\n                    <span class=\"featured_span\">$82.00</span>\n                    <p class=\"afeaturedtext\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"featured-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n        <div class=\"featured-box\">\n            <img class=\"featured-img\" src=\"").concat(_group2.default, "\" alt=\"\"/>\n            <div class=\"featured-brend\">\n                <div class=\"featured_brend\">\n                    <span class=\"featured-span\">$22.00</span>\n                    <span class=\"featured_span\">$82.00</span>\n                    <p class=\"featured-text\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"featured-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n        <div class=\"featured-box\">\n            <img class=\"featured-img\" src=\"").concat(_group3.default, "\" alt=\"\"/>\n            <div class=\"featured-brend\">\n                <div class=\"featured_brend\">\n                    <span class=\"featured-span\">$22.00</span>\n                    <span class=\"featured_span\">$82.00</span>\n                    <p class=\"featured-text\">Sterling Silver Band Ring</p>\n                </div>\n                <img class=\"featured-shopping\" src=\"").concat(_shoppingBag.default, "\" alt=\"\"/>\n            </div>\n        </div>\n        \n    ");
+  var featuredProductsButton = document.createElement("button");
+  featuredProductsButton.className = "featured-btn";
+  featuredProductsButton.textContent = "View All";
+  section.append(featuredProductsTitle, featuredProductsBlock, featuredProductsButton);
+  return section;
+}
+},{"../../img/newArrivals/group-1.png":"src/img/newArrivals/group-1.png","../../img/newArrivals/group-2.png":"src/img/newArrivals/group-2.png","../../img/newArrivals/group-3.png":"src/img/newArrivals/group-3.png","../../img/newArrivals/shopping-bag.svg":"src/img/newArrivals/shopping-bag.svg","./featuredProducts.css":"src/components/featuredProducts/featuredProducts.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -531,14 +563,15 @@ var _milancelosMain = require("../components/milancelos/milancelosMain");
 var _topProduct = require("../components/topProduct/topProduct");
 var _newArrivals = require("../components/newArrivals/newArrivals");
 var _newCollection = require("../components/newCollection/newCollection");
+var _featuredProducts = require("../components/featuredProducts/featuredProducts");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -572,7 +605,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35699" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37491" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
