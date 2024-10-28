@@ -588,7 +588,47 @@ function getMustHave() {
   container.append(mustHaveTitle, mustHaveBlock);
   return section;
 }
-},{"../../img/mustHave/have.png":"src/img/mustHave/have.png","../../img/mustHave/car.svg":"src/img/mustHave/car.svg","../../img/mustHave/package.svg":"src/img/mustHave/package.svg","../../img/mustHave/secure.svg":"src/img/mustHave/secure.svg","./mustHave.css":"src/components/mustHave/mustHave.css"}],"src/page/pageMain.css":[function(require,module,exports) {
+},{"../../img/mustHave/have.png":"src/img/mustHave/have.png","../../img/mustHave/car.svg":"src/img/mustHave/car.svg","../../img/mustHave/package.svg":"src/img/mustHave/package.svg","../../img/mustHave/secure.svg":"src/img/mustHave/secure.svg","./mustHave.css":"src/components/mustHave/mustHave.css"}],"src/img/imageGallery/images-1.png":[function(require,module,exports) {
+module.exports = "/images-1.63293946.png";
+},{}],"src/img/imageGallery/images-2.png":[function(require,module,exports) {
+module.exports = "/images-2.b3ce80ee.png";
+},{}],"src/img/imageGallery/images-3.png":[function(require,module,exports) {
+module.exports = "/images-3.302bd359.png";
+},{}],"src/img/imageGallery/images-4.png":[function(require,module,exports) {
+module.exports = "/images-4.98eb7348.png";
+},{}],"src/img/imageGallery/images-5.png":[function(require,module,exports) {
+module.exports = "/images-5.b34b4a9f.png";
+},{}],"src/components/imageGallery/imageGallery.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/imageGallery/imageGallery.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getImageGallery = getImageGallery;
+var _images = _interopRequireDefault(require("../../img/imageGallery/images-1.png"));
+var _images2 = _interopRequireDefault(require("../../img/imageGallery/images-2.png"));
+var _images3 = _interopRequireDefault(require("../../img/imageGallery/images-3.png"));
+var _images4 = _interopRequireDefault(require("../../img/imageGallery/images-4.png"));
+var _images5 = _interopRequireDefault(require("../../img/imageGallery/images-5.png"));
+require("./imageGallery.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getImageGallery() {
+  var section = document.createElement("section");
+  section.className = "section-gallery";
+  var container = document.createElement("div");
+  container.className = "container";
+  var galleryBlock = document.createElement("div");
+  galleryBlock.className = "gallery-block";
+  galleryBlock.innerHTML = "\n        <h2 class=\"gallery-title\">Image Gallery</h2>\n        <p class=\"gallery-text\">Phasellus lorem malesuada ligula pulvinar commodo maecenas</p>\n        <div class=\"gallery-box\">\n            <img class=\"gallery-img\" src=\"".concat(_images.default, "\"/>\n            <div class=\"gallery-minbox\">\n                <img class=\"gallery-img\" src=\"").concat(_images2.default, "\"/>\n                <div class=\"galeery-min\">\n                    <img class=\"gallery-img\" src=\"").concat(_images4.default, "\"/>\n                    <img class=\"gallery-img\" src=\"").concat(_images5.default, "\"/>\n                </div>\n            </div>\n            <img class=\"gallery-img\" src=\"").concat(_images3.default, "\"/>\n        </div>\n        <h3 class=\"gallery_title\">Newsletter Sign Up</h3>\n        <p class=\"gallery_text\">Sign up for new arrivals, offers, and more!</p>\n        <form class=\"gallery-form\">\n            <input class=\"gallery-input\" type=\"text\" placeholder=\"Enter Your Email\">\n            <button class=\"gallery-btn\" type=\"submit\">Submit</button>\n        </form>\n    ");
+  section.append(container);
+  container.append(galleryBlock);
+  return section;
+}
+},{"../../img/imageGallery/images-1.png":"src/img/imageGallery/images-1.png","../../img/imageGallery/images-2.png":"src/img/imageGallery/images-2.png","../../img/imageGallery/images-3.png":"src/img/imageGallery/images-3.png","../../img/imageGallery/images-4.png":"src/img/imageGallery/images-4.png","../../img/imageGallery/images-5.png":"src/img/imageGallery/images-5.png","./imageGallery.css":"src/components/imageGallery/imageGallery.css"}],"src/page/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -605,14 +645,15 @@ var _newArrivals = require("../components/newArrivals/newArrivals");
 var _newCollection = require("../components/newCollection/newCollection");
 var _featuredProducts = require("../components/featuredProducts/featuredProducts");
 var _mustHave = require("../components/mustHave/mustHave");
+var _imageGallery = require("../components/imageGallery/imageGallery");
 require("./pageMain.css");
 function getMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)(), (0, _mustHave.getMustHave)());
+  main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)(), (0, _mustHave.getMustHave)(), (0, _imageGallery.getImageGallery)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","../components/mustHave/mustHave":"src/components/mustHave/mustHave.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","../components/mustHave/mustHave":"src/components/mustHave/mustHave.js","../components/imageGallery/imageGallery":"src/components/imageGallery/imageGallery.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -646,7 +687,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39671" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37837" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
