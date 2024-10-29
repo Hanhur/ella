@@ -653,16 +653,162 @@ function getMain() {
   main.append((0, _milancelosMain.getSectionMain)(), (0, _topProduct.getTopProduct)(), (0, _newArrivals.getNewArrivals)(), (0, _newCollection.getNewCollection)(), (0, _featuredProducts.getFeaturedProducts)(), (0, _mustHave.getMustHave)(), (0, _imageGallery.getImageGallery)());
   return main;
 }
-},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","../components/mustHave/mustHave":"src/components/mustHave/mustHave.js","../components/imageGallery/imageGallery":"src/components/imageGallery/imageGallery.js","./pageMain.css":"src/page/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../components/milancelos/milancelosMain":"src/components/milancelos/milancelosMain.js","../components/topProduct/topProduct":"src/components/topProduct/topProduct.js","../components/newArrivals/newArrivals":"src/components/newArrivals/newArrivals.js","../components/newCollection/newCollection":"src/components/newCollection/newCollection.js","../components/featuredProducts/featuredProducts":"src/components/featuredProducts/featuredProducts.js","../components/mustHave/mustHave":"src/components/mustHave/mustHave.js","../components/imageGallery/imageGallery":"src/components/imageGallery/imageGallery.js","./pageMain.css":"src/page/pageMain.css"}],"src/footers/footerAbout/footerAbout.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerAbout/footerAbout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterAbout = getFooterAbout;
+require("./footerAbout.css");
+function getFooterAbout() {
+  var footerAbout = document.createElement("div");
+  footerAbout.className = "footer-about";
+  footerAbout.innerHTML = "\n        <div class=\"about-block\">\n            <h2 class=\"about-title\">About</h2>\n            <ul class=\"about-list\">\n                <li class=\"about-item\">\n                    <a class=\"about-link\" href=\"#\">Our Story</a>\n                </li>\n                <li class=\"about-item\">\n                    <a class=\"about-link\" href=\"#\">Careers</a>\n                </li>\n                <li class=\"about-item\">\n                    <a class=\"about-link\" href=\"#\">Press</a>\n                </li>\n                <li class=\"about-item\">\n                    <a class=\"about-link\" href=\"#\">Blog</a>\n                </li>\n            </ul>\n        </div>\n    ";
+  return footerAbout;
+}
+},{"./footerAbout.css":"src/footers/footerAbout/footerAbout.css"}],"src/footers/footerShop/footerShop.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerShop/footerShop.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterShop = getFooterShop;
+require("./footerShop.css");
+function getFooterShop() {
+  var footerShop = document.createElement("div");
+  footerShop.className = "footer-shop";
+  footerShop.innerHTML = "\n        <div class=\"shop-block\">\n            <h2 class=\"shop-title\">Shop</h2>\n            <ul class=\"shop-list\">\n                <li class=\"shop-item\">\n                    <a class=\"shop-link\" href=\"#\">Bibendumetos</a>\n                </li>\n                <li class=\"shop-item\">\n                    <a class=\"shop-link\" href=\"#\">Pellentes Habitanto</a>\n                </li>\n                <li class=\"shop-item\">\n                    <a class=\"shop-link\" href=\"#\">Senectus</a>\n                </li>\n                <li class=\"shop-item\">\n                    <a class=\"shop-link\" href=\"#\">Consequatod</a>\n                </li>\n            </ul>\n        </div>\n    ";
+  return footerShop;
+}
+},{"./footerShop.css":"src/footers/footerShop/footerShop.css"}],"src/footers/footerPopularSearch/footerPopularSearch.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerPopularSearch/footerPopularSearch.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterPopularSearch = getFooterPopularSearch;
+require("./footerPopularSearch.css");
+function getFooterPopularSearch() {
+  var footerPopularSearch = document.createElement("div");
+  footerPopularSearch.className = "footer-popularSerch";
+  footerPopularSearch.innerHTML = "\n        <div class=\"populerSearch-block\">\n            <h2 class=\"populerSearch-title\">Popular Search</h2>\n            <ul class=\"populerSearch-list\">\n                <li class=\"populerSearch-item\">\n                    <a class=\"populerSearch-link\" href=\"#\">18K White Gold</a>\n                </li>\n                <li class=\"populerSearch-item\">\n                    <a class=\"populerSearch-link\" href=\"#\">Rose Gold</a>\n                </li>\n                <li class=\"populerSearch-item\">\n                    <a class=\"populerSearch-link\" href=\"#\">Wedding Jewelry</a>\n                </li>\n                <li class=\"populerSearch-item\">\n                    <a class=\"populerSearch-link\" href=\"#\">Luxury Watches</a>\n                </li>\n            </ul>\n        </div>\n    ";
+  return footerPopularSearch;
+}
+},{"./footerPopularSearch.css":"src/footers/footerPopularSearch/footerPopularSearch.css"}],"src/footers/footerHelp/footerHelp.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerHelp/footerHelp.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterHelp = getFooterHelp;
+require("./footerHelp.css");
+function getFooterHelp() {
+  var footerHelp = document.createElement("div");
+  footerHelp.className = "footer-help";
+  footerHelp.innerHTML = "\n        <div class=\"help-block\">\n            <h2 class=\"help-title\">Help</h2>\n            <ul class=\"help-list\">\n                <li class=\"help-item\">\n                    <a class=\"help-link\" href=\"#\">Sizing Help</a>\n                </li>\n                <li class=\"help-item\">\n                    <a class=\"help-link\" href=\"#\">Returns & Exchanges</a>\n                </li>\n                <li class=\"help-item\">\n                    <a class=\"help-link\" href=\"#\">Shipping</a>\n                </li>\n                <li class=\"help-item\">\n                    <a class=\"help-link\" href=\"#\">Theme FAQs</a>\n                </li>\n            </ul>\n        </div>\n    ";
+  return footerHelp;
+}
+},{"./footerHelp.css":"src/footers/footerHelp/footerHelp.css"}],"src/footers/footerContact/footerContact.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerContact/footerContact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterContact = getFooterContact;
+require("./footerContact.css");
+function getFooterContact() {
+  var footerContact = document.createElement("address");
+  footerContact.className = "footer-contact";
+  footerContact.innerHTML = "\n        <div class=\"contact-block\">\n            <h2 class=\"contact-title\">Contact Us</h2>\n            <ul class=\"contact-list\">\n                <li class=\"contact-item\">\n                    <a class=\"contact-link\" href=\"tel:\">TEXT: (090) 123-EIIA</a>\n                </li>\n                <li class=\"contact-item\">\n                    <a class=\"contact-link\" href=\"mailto:example@domain.com\">Email:example@domain.com</a>\n                </li>\n            </ul>\n        </div>\n    ";
+  return footerContact;
+}
+},{"./footerContact.css":"src/footers/footerContact/footerContact.css"}],"src/footers/footerAddress/footerAddress.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerAddress/footerAddress.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterAddress = getFooterAddress;
+require("./footerAddress.css");
+function getFooterAddress() {
+  var footerAddress = document.createElement("address");
+  footerAddress.className = "footer-address";
+  footerAddress.innerHTML = "\n        <div class=\"address-block\">\n            <h2 class=\"address-title\">Address</h2>\n            <p class=\"address-text\">685 Market Street San Francisco, CA 94105, US</p>\n        </div>\n    ";
+  return footerAddress;
+}
+},{"./footerAddress.css":"src/footers/footerAddress/footerAddress.css"}],"src/components/footer/footer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/footer/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooter = getFooter;
+var _footerAbout = require("../../footers/footerAbout/footerAbout");
+var _footerShop = require("../../footers/footerShop/footerShop");
+var _footerPopularSearch = require("../../footers/footerPopularSearch/footerPopularSearch");
+var _footerHelp = require("../../footers/footerHelp/footerHelp");
+var _footerContact = require("../../footers/footerContact/footerContact");
+var _footerAddress = require("../../footers/footerAddress/footerAddress");
+var _logo = _interopRequireDefault(require("../../img/logo.svg"));
+require("./footer.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getFooter() {
+  var footer = document.createElement("footer");
+  footer.className = "footer";
+  var container = document.createElement("div");
+  container.className = "container";
+  var footerInner = document.createElement("div");
+  footerInner.className = "footer-inner";
+  var footerLogo = document.createElement("img");
+  footerLogo.className = "footer-logo";
+  footerLogo.src = _logo.default;
+  footerLogo.alt = "Example image";
+  footer.append(container);
+  container.append(footerInner);
+  footerInner.append(footerLogo, (0, _footerAbout.getFooterAbout)(), (0, _footerShop.getFooterShop)(), (0, _footerPopularSearch.getFooterPopularSearch)(), (0, _footerHelp.getFooterHelp)(), (0, _footerContact.getFooterContact)(), (0, _footerAddress.getFooterAddress)());
+  return footer;
+}
+},{"../../footers/footerAbout/footerAbout":"src/footers/footerAbout/footerAbout.js","../../footers/footerShop/footerShop":"src/footers/footerShop/footerShop.js","../../footers/footerPopularSearch/footerPopularSearch":"src/footers/footerPopularSearch/footerPopularSearch.js","../../footers/footerHelp/footerHelp":"src/footers/footerHelp/footerHelp.js","../../footers/footerContact/footerContact":"src/footers/footerContact/footerContact.js","../../footers/footerAddress/footerAddress":"src/footers/footerAddress/footerAddress.js","../../img/logo.svg":"src/img/logo.svg","./footer.css":"src/components/footer/footer.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
 var _pageMain = require("./src/page/pageMain.js");
+var _footer = require("./src/components/footer/footer.js");
 var app = document.querySelector("#app");
 var header = (0, _header.getHeader)();
 var main = (0, _pageMain.getMain)();
-app.append(header, main);
-},{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var footer = (0, _footer.getFooter)();
+app.append(header, main, footer);
+},{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js","./src/components/footer/footer.js":"src/components/footer/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -687,7 +833,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37837" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43007" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
