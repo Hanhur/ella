@@ -1,0 +1,12 @@
+.address-title
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--Similar-2-color);
+    margin-bottom: 22px;
+}
+.address-text
+{
+    width: 145px;
+    color: var(--Similar-2-color);
+}

@@ -1,0 +1,14 @@
+.footer
+{
+    background-color: var(--White-2-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 75px 0 100px;
+}
+.footer-inner
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0 50px;
+}
