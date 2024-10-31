@@ -4,6 +4,7 @@ import { getFooterPopularSearch } from "../../footers/footerPopularSearch/footer
 import { getFooterHelp } from "../../footers/footerHelp/footerHelp";
 import { getFooterContact } from "../../footers/footerContact/footerContact";
 import { getFooterAddress } from "../../footers/footerAddress/footerAddress";
+import { getFooterSocial } from "../../footers/footerSocial/footerSocial";
 
 import logo from "../../img/logo.svg";
 import "./footer.css";
@@ -24,8 +25,12 @@ export function getFooter()
     footerLogo.src = logo;
     footerLogo.alt = "Example image";
 
+    const footerSocialBox = document.createElement("div");
+    footerSocialBox.className = "footer-box";
+
     footer.append(container);
-    container.append(footerInner);
+    container.append(footerInner, footerSocialBox);
+
     footerInner.append(
         footerLogo, 
         getFooterAbout(),
@@ -35,6 +40,8 @@ export function getFooter()
         getFooterContact(),
         getFooterAddress(),
     );
+
+    footerSocialBox.append(getFooterSocial());
 
     return footer;
 }

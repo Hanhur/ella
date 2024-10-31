@@ -1,0 +1,10 @@
+.footer-list
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 11px;
+}
+.footer-img
+{
+    width: 30px;
+}
