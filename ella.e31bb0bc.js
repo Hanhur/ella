@@ -761,7 +761,49 @@ function getFooterAddress() {
   footerAddress.innerHTML = "\n        <div class=\"address-block\">\n            <h2 class=\"address-title\">Address</h2>\n            <p class=\"address-text\">685 Market Street San Francisco, CA 94105, US</p>\n        </div>\n    ";
   return footerAddress;
 }
-},{"./footerAddress.css":"src/footers/footerAddress/footerAddress.css"}],"src/components/footer/footer.css":[function(require,module,exports) {
+},{"./footerAddress.css":"src/footers/footerAddress/footerAddress.css"}],"src/img/instagram.svg":[function(require,module,exports) {
+module.exports = "/instagram.20737fa7.svg";
+},{}],"src/img/facebook.svg":[function(require,module,exports) {
+module.exports = "/facebook.64abde7d.svg";
+},{}],"src/img/twitter.svg":[function(require,module,exports) {
+module.exports = "/twitter.015fe60e.svg";
+},{}],"src/footers/footerSocial/footerSocial.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/footers/footerSocial/footerSocial.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooterSocial = getFooterSocial;
+var _instagram = _interopRequireDefault(require("../../img/instagram.svg"));
+var _facebook = _interopRequireDefault(require("../../img/facebook.svg"));
+var _twitter = _interopRequireDefault(require("../../img/twitter.svg"));
+require("./footerSocial.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var socialArray = [_instagram.default, _facebook.default, _twitter.default];
+function getFooterSocial() {
+  var list = document.createElement("ul");
+  list.className = "footer-list";
+  socialArray.forEach(function (item) {
+    var items = document.createElement("li");
+    items.className = "footer-items";
+    var link = document.createElement("a");
+    link.className = "footer-link";
+    link.href = "#";
+    var img = document.createElement("img");
+    img.className = "footer-img";
+    img.src = item;
+    img.alt = "Example image";
+    list.appendChild(items);
+    items.appendChild(link);
+    link.appendChild(img);
+  });
+  return list;
+}
+},{"../../img/instagram.svg":"src/img/instagram.svg","../../img/facebook.svg":"src/img/facebook.svg","../../img/twitter.svg":"src/img/twitter.svg","./footerSocial.css":"src/footers/footerSocial/footerSocial.css"}],"src/components/footer/footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -778,6 +820,7 @@ var _footerPopularSearch = require("../../footers/footerPopularSearch/footerPopu
 var _footerHelp = require("../../footers/footerHelp/footerHelp");
 var _footerContact = require("../../footers/footerContact/footerContact");
 var _footerAddress = require("../../footers/footerAddress/footerAddress");
+var _footerSocial = require("../../footers/footerSocial/footerSocial");
 var _logo = _interopRequireDefault(require("../../img/logo.svg"));
 require("./footer.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
@@ -792,12 +835,15 @@ function getFooter() {
   footerLogo.className = "footer-logo";
   footerLogo.src = _logo.default;
   footerLogo.alt = "Example image";
+  var footerSocialBox = document.createElement("div");
+  footerSocialBox.className = "footer-box";
   footer.append(container);
-  container.append(footerInner);
+  container.append(footerInner, footerSocialBox);
   footerInner.append(footerLogo, (0, _footerAbout.getFooterAbout)(), (0, _footerShop.getFooterShop)(), (0, _footerPopularSearch.getFooterPopularSearch)(), (0, _footerHelp.getFooterHelp)(), (0, _footerContact.getFooterContact)(), (0, _footerAddress.getFooterAddress)());
+  footerSocialBox.append((0, _footerSocial.getFooterSocial)());
   return footer;
 }
-},{"../../footers/footerAbout/footerAbout":"src/footers/footerAbout/footerAbout.js","../../footers/footerShop/footerShop":"src/footers/footerShop/footerShop.js","../../footers/footerPopularSearch/footerPopularSearch":"src/footers/footerPopularSearch/footerPopularSearch.js","../../footers/footerHelp/footerHelp":"src/footers/footerHelp/footerHelp.js","../../footers/footerContact/footerContact":"src/footers/footerContact/footerContact.js","../../footers/footerAddress/footerAddress":"src/footers/footerAddress/footerAddress.js","../../img/logo.svg":"src/img/logo.svg","./footer.css":"src/components/footer/footer.css"}],"index.js":[function(require,module,exports) {
+},{"../../footers/footerAbout/footerAbout":"src/footers/footerAbout/footerAbout.js","../../footers/footerShop/footerShop":"src/footers/footerShop/footerShop.js","../../footers/footerPopularSearch/footerPopularSearch":"src/footers/footerPopularSearch/footerPopularSearch.js","../../footers/footerHelp/footerHelp":"src/footers/footerHelp/footerHelp.js","../../footers/footerContact/footerContact":"src/footers/footerContact/footerContact.js","../../footers/footerAddress/footerAddress":"src/footers/footerAddress/footerAddress.js","../../footers/footerSocial/footerSocial":"src/footers/footerSocial/footerSocial.js","../../img/logo.svg":"src/img/logo.svg","./footer.css":"src/components/footer/footer.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./src/components/header/header.js");
@@ -833,7 +879,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43007" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43713" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
